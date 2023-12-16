@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap'); /*Logo font*/
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Red+Hat+Display:wght@300&display=swap'); /*Commercial mark font*/
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('/Projeto_TPI/images/gif_bckgnd.gif') center/cover no-repeat fixed;
+  background-color: #000;
+}
+  
+header { 
+  width: 100%;
+}
+
+header div {
+  display: grid;
+  grid-template-areas: "logo account";
+  grid-template-columns: 12vw 4vw;
+  justify-content: end;
+  gap: 40%;
+}
+
+header .logo {
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .account {
+  grid-area: account;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+}
+
+
+header .account {
+  grid-area: account;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 35px;
+}
+
+header .material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  background: none;
+  border: #000;
+  color: #8f148f;
+  font-size: 35px;
+  text-decoration: none;
+  padding: 0%;
+  background-color: black;
+  border-radius: 100%;
+}
+
+header h1 {
+  margin: 0%;
+  font-family: 'Black Ops One';
+  font-size: 5em;
+}
+
+main div {
+  display: grid;
+  grid-template-areas: "female male kid";
+  grid-template-columns: 1 1 1;
+  justify-content: center;
+  gap: 20px;
+
+}
+
+main img {
+  width: 500px;
+  height: 700px;
+  border-radius: 1.5%;
+}
+
+main .type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: center;
+  gap: 0;
+}
+
+main label {
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #000;
+  font-size: 4em;
+}
+
+#spchr {
+  color: #8f148f;
+}
+
+footer {
+  font-family: 'Red Hat';
+  color: #000;
+  text-align: center;
+  padding: 1px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+}
