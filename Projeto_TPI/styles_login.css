@@ -1,160 +1,163 @@
+/* estilos gerais do body */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background: url('../Projeto_TPI/images/gif_bckgnd.gif') center/cover no-repeat fixed;
   }
+
+:root{
+  --primary-color: #000000; /* define a cor primária para o uso global */
+}
   
 .wrapper{
-  margin: 0;
-  padding: 0;
+  margin: 0;  /* remove a margem */
+  padding: 0; /*remove o preenchimento */
   box-sizing: border-box;
-  font-size: 'Black Ops One';
-  text-decoration: underline;
-  width:  100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  font-size: 'Black Ops One'; /* tamanho da fonte */
+  text-decoration: underline; /* texto sublinhado */
+  width:  100%; /* define a largura */
+  display: flex; /* deixa o mesmo flexivel */
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center; /* centraliza verticalmente */
+  min-height: 100vh; /* altura minima do viewport */
 }
 
 .login_box{
-  position: relative;
-  width: 450px;
-  backdrop-filter:  blur(25px);
-  border: 2px solid var(--primary-color);
-  border-radius: 15px;
-  padding: 7.5em 2.5em 4em 2.5em;
-  color: rgb(255, 255, 255);
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
-  
+  position: relative; /* a posição fica relativa */
+  width: 450px; /* largura */
+  backdrop-filter:  blur(25px); /* efeito do desfocado */ 
+  border: 2px solid var(--primary-color); /* borda */
+  border-radius: 15px; /* deixa as bordas redondas */
+  padding: 7.5em 2.5em 4em 2.5em; /* preenchimento */
+  color: rgb(255, 255, 255); /* cor do texto */
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3); /* adiciona uma sombra */
 }
 
 .login-header{
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(0, 0, 0);
-  width: 140px;
-  height: 70px;
-  border-radius: 0 0 20px 20px;
+  position: absolute; /* a posição fica absoluta */
+  top: 0; /* distância do "top" */
+  left: 50%; /* alinha em relação ao centro horizontal */
+  transform: translate(-50%); /* centralizar horizontalmente */
+  display: flex; /* flex */
+  align-items: center; /* alinha o conteudo verticalmente ao centro */
+  justify-content: center; /* alinha o conteudo ao centro horizontalmente */
+  background-color: rgb(0, 0, 0); /* cor do fundo */
+  width: 140px; /* largura */
+  height: 70px; /* altura */
+  border-radius: 0 0 20px 20px; /* deixa as bordas redondas */
 }
 
+/* estilos para o texto dentro do cabeçalho do login */
 .login-header span{
-  font-size: 30px;
-  color: rgb(255, 255, 255);
+  font-size: 30px; /* tamanho da fonte */
+  color: rgb(255, 255, 255); /* cor da fonte */
 }
 
 .login-header::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -30px;
-  width: 30px;
-  height: 30px;
-  border-top-right-radius: 50%;
-  background: transparent;
-  box-shadow: 15px 0 0 0 var(--primary-color);
+  content: ""; /* deixa o conteudo em branco */
+  position: absolute; /* posição absoluta */
+  top: 0; /* distância do top */
+  left: -30px; /* alinhar à esquerda */
+  width: 30px; /* largura */
+  height: 30px; /* altura */
+  border-top-right-radius: 50%; /* torna a borda superior direita redonda */
+  background: transparent; /* deixa o fundo transparente */
+  box-shadow: 15px 0 0 0 var(--primary-color); /* adiciona uma sombra à caixa */
 }
 
 .login-header::after{
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -30px;
-  width: 30px;
-  height: 30px;
-  border-top-left-radius: 50%;
-  background: transparent;
-  box-shadow: -15px 0 0 0 var(--primary-color);
+  content: ""; /* deixa o conteudo em branco */
+  position: absolute; /* posição absoluta */
+  top: 0; /* distância do top */
+  right: -30px; /* alinhar à esquerda */
+  width: 30px; /* largura */
+  height: 30px; /* altura */
+  border-top-left-radius: 50%; /* torna a borda superior direita redonda */
+  background: transparent; /* deixa o fundo transparente */
+  box-shadow: -15px 0 0 0 var(--primary-color); /* adiciona uma sombra à caixa */
 }
 
 .input_box{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0;
+  position: relative; /* define a posição como relativa */
+  display: flex; /* flexivel */
+  flex-direction: column; /* define a direção do conteudo como coluna */
+  margin: 20px 0; /* deixa as margens superior/inferior com 20px e as margens laterais com 0px */
 }
 
+/* estilos para o input-fiel */
 .input-field{
-  width: 85%;
-  height: 55px;
-  font-size: 16px;
-  background: transparent;
-  color: var(--primary-color);
-  padding-inline: 20px 50px;
-  border: 2px solid var(--primary-color);
-  border-radius: 30px;
-  outline: none;
+  width: 85%; /* define a largura como 85% */
+  height: 55px; /* define a altura como 55px */
+  font-size: 16px; /* define o tamanho da fonte */
+  background: transparent; /* deixa o fundo transparente */
+  color: var(--primary-color); /* define a cor do texto como a cor primária */
+  padding-inline: 20px 50px; /* define o preenchimento interno (padding) para cima/baixo com 20px e esquerda/direita com 50px */ 
+  border: 2px solid var(--primary-color); /* deixa a borda com 2px sólida */
+  border-radius: 30px; /* deixa a borda redonda */ 
+  outline: none; /* não tem contorno */
 }
 
 #user{
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* define uma margem de 10px */
 }
 
 .label{
-  position: absolute;
-  top: 15px;
-  left: 20px;
-  transition: .2s;
+  position: absolute; /* deixa a posição absoluta */
+  top: 15px; /* distância do "top" como 15px */
+  left: 20px; /* distância da esquerda como 20px */
+  transition: .2s; /* deixa uma transição "suave" */
 }
 
 
 .input-field:focus ~ .label,
 .input-field:valid ~ .label{
-  position: absolute;
-  top: -10px;
-  left: 20px;
-  font-size: 14px;
-  background-color: rgb(0, 0, 0);
-  border-radius: 30px;
-  color: rgb(255, 255, 255);
-  padding: 0 10px;
+  position: absolute; /* define a posição como absoluta */
+  top: -10px; /* move a mesma para cima */
+  left: 20px; /* move a mesma para a esquerda */
+  font-size: 14px; /* define o tamanho da fonte */
+  background-color: rgb(0, 0, 0); /* define a cor de fundo */
+  border-radius: 30px; /* deixa a borda redonda */
+  color: rgb(255, 255, 255); /* define a cor do texto */
+  padding: 0 10px; /* adiciona um preenchimento interno */
 }
 
 .icon{
-  position: absolute;
-  top: 18px;
-  right: 25px;
-  font-size: 20px;
+  position: absolute; /* define a poisção como absoluta */
+  top: 18px; /* distância do "top" */
+  right: 25px; /* distância do lado direito */
+  font-size: 20px; /* define o tamanho da fonte */
 }
 
 .remember-fogort{
-  display: flex;
-  justify-content: space-between;
-  font-size: 15px;
+  display: flex; /* flexível */
+  justify-content: space-between; /* distribui o espaço entre o conteudo */
+  font-size: 15px; /* define o tamanho da fonte */
 }
 
 .input-submit{
-  width: 100%;
-  height: 50px;
-  background: #000000;
-  font-size: 16px;
-  font-weight: 500;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: .3s;
-  color: white;
+  width: 100%; /* define a largura como 100% */
+  height: 50px; /* define a altura como 100% */
+  background: #000000; /* define a cor de fundo */
+  font-size: 16px; /* define o tamanho da fonte */
+  font-weight: 500; /* */
+  border: none; /* remove a borda */
+  border-radius: 30px; /* deixa a borda redonda */
+  cursor: pointer; /* deixa o cursor do rato com o estilo "pointer" ao passar por cima */
+  transition: .3s; /* adiciona uma transição suave */
+  color: white; /* define a cor do texto */
 }
 
 .register{
-  text-align: center;
+  text-align: center; /* alinha ao centro o texto */
 }
 
 .register a{
-  font-weight: 500;
+  font-weight: 500; /**/
 }
 
 a{
-  text-decoration: none;
-  color: var(--primary-color);
+  text-decoration: none; /* retira a decoração de texto nos links */
+  color: var(--primary-color); /* define a cor do texto */
 }
 
-:root{
-  --primary-color: #000000;
-}
