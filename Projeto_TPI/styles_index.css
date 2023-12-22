@@ -30,6 +30,7 @@ header .logo h1 {
     font-size: 3em;
     color: #000000;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    user-select: none;
 }
 
 #spchr {
