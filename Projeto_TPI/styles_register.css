@@ -3,11 +3,17 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('../Projeto_TPI/images/gif_bckgnd.gif') center/cover no-repeat fixed;
+    background: #756AB6;
   }
 
 :root{
   --primary-color: #000000; /* define a cor primária para o uso global */
+}
+
+.register a:last-child span, /* dar underline à palavra "login" */
+.go-back span {
+  text-decoration: underline;
+  color: black;
 }
   
 .wrapper{
@@ -15,7 +21,6 @@ body {
   padding: 0; /*remove o preenchimento */
   box-sizing: border-box;
   font-size: 'Black Ops One'; /* tamanho da fonte */
-  text-decoration: underline; /* texto sublinhado */
   width:  100%; /* define a largura */
   display: flex; /* deixa o mesmo flexivel */
   justify-content: center; /* centraliza horizontalmente */
@@ -51,7 +56,7 @@ body {
 /* estilos para o texto dentro do cabeçalho do login */
 .register-header span{
   font-size: 30px; /* tamanho da fonte */
-  color: rgb(255, 255, 255); /* cor da fonte */
+  color: #756AB6; /* cor da fonte */
 }
 
 .register-header::before{
