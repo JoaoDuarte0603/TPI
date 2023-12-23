@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Montserrat&family=Red+Hat+Display:wght@300&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #756AB6;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #756AB6;
 }
 
 .container {
-    max-width: 90%;
-    margin: 0 auto;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 header {
-    padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    background-color: #AC87C5;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  background-color: #AC87C5;
 }
 
 nav {
@@ -42,6 +42,7 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
+  transition: 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -52,18 +53,17 @@ nav ul li a:hover {
 }
 
 header div {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 header .logo h1 {
-    margin: 0;
-    font-family: 'Black Ops One';
-    font-size: 3em;
-    color: #000000;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  background-color: red;
+  margin: 0;
+  font-family: 'Black Ops One';
+  font-size: 3em;
+  color: #000000;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 header .logo a {
@@ -74,88 +74,88 @@ header .logo a {
   color: #8f148f;
 }
 
-header .account a {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24;
-    background: none;
-    border: none;
-    color: #000000;
-    font-size: 35px;
-    text-decoration: none;
-    padding: 0;
-    background-color: radial-gradient( #2c2c2c, #434343);
-    border-radius: 50%;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    transition: 0.3s ease;
+header .icons a {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 35px;
+  text-decoration: none;
+  padding: 0;
+  border-radius: 100%;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease;
 }
 
-header .account a:hover {
+#account {
+  margin-right: 15px;
+}
+
+header .icons a:hover {
   transition: 0.3s ease;
   color: #8f148f;
 }
 
 main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
 }
 
-.type {
-  position: relative;
-  overflow: hidden;
-  border-radius: 15px;
+main .promo {
+  width: 100%;
+  height: 50px;
+  background-color: yellowgreen;
 }
 
-.type img {
+main .content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  max-width: 90%;
+  justify-content: center;
+}
+
+main .product {
+  width: 20em;
+  height: 30em;
+  border-radius: 10px;
+  background-color: rgba(255, 229, 229, 0.60);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+}
+
+main .item {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+}
+
+main .image {
+  width: 17em;
+  height: 25em;
+} 
+
+main .image img {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin-top: 20px;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 15px;
-  transition: transform 0.3s ease;
 }
 
-.type .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+main .info {
+  margin-top: 5px;
 }
-
-.type:hover img {
-  transform: scale(1.1);
-}
-
-.type:hover .overlay {
-  opacity: 1;
-}
-
-.type label {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-  transition: opacity 0.3s ease;
-}
-
-.type:hover label {
-  opacity: 1;
-}
-
 
 footer {
   color: #000000;
@@ -169,4 +169,12 @@ footer {
   position: fixed;
   bottom: 0;
   user-select: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }

@@ -41,25 +41,28 @@ header .logo a {
   color: #8f148f;
 }
 
-header .account a {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24;
-    background: none;
-    border: none;
-    color: #000000;
-    font-size: 35px;
-    text-decoration: none;
-    padding: 0;
-    background-color: radial-gradient( #2c2c2c, #434343);
-    border-radius: 50%;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    transition: 0.3s ease;
+header .icons a {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 35px;
+  text-decoration: none;
+  padding: 0;
+  border-radius: 100%;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease;
 }
 
-header .account a:hover {
+#account {
+  margin-right: 15px;
+}
+
+header .icons a:hover {
   transition: 0.3s ease;
   color: #8f148f;
 }
