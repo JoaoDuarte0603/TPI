@@ -150,14 +150,13 @@ main .image img {
 main .items {
   display: flex;
   flex-direction: column;
-  background-color: blue;
+
   height: 6em;
 }
 
 main .name {
-  background-color: red;
   width: 17em;
-  height: 3em;
+  height: 3em; 
 }
 
 
