@@ -202,6 +202,11 @@ main .boxes {
   user-select: none;
 }
 
+main .boxes a {
+  text-decoration: none;
+  color: #000000;
+}
+
 main #purple {
   background-color: #756AB6;
 }
@@ -264,6 +269,7 @@ main button {
   transition: 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   margin-top: 10px;
+  cursor: pointer;
 }
 
 main button:hover {
