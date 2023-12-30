@@ -166,18 +166,21 @@ main .image img {
 }
 
 main .items {
-  display: flex;
-  flex-direction: column;
-
-  height: 6em;
+  margin-left: 50px;
+  height: 4em;
+  margin-top: 30px;
 }
 
-main .name {
+main .items h3 {
+  padding: 0;
+  margin: 0;
   width: 17em;
-  height: 3em; 
 }
 
-
+main .items p {
+  margin: 0;
+  padding-top: 7px;
+}
 
 footer {
   color: #000000;

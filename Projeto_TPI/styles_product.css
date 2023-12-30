@@ -121,10 +121,15 @@ main .container {
 main .images {
   background-color: rgba(255, 229, 229, 0.60);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 35.5em;
 }
 
 main .images img {
   height: 35.5em;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 main .info {
@@ -132,6 +137,8 @@ main .info {
   width: 60%;
   background-color: rgba(255, 229, 229, 0.60);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 main .info * {
@@ -283,3 +290,4 @@ footer {
   'GRAD' 0,
   'opsz' 24
 }
+
