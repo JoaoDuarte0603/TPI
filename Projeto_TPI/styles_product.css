@@ -141,12 +141,6 @@ main .info {
   border-bottom-right-radius: 10px;
 }
 
-main .info * {
-}
-
-main .name_price {
-}
-
 main .name_price h3 {
   font-size: 40px;
   padding-top: 30px;
