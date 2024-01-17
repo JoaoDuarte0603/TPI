@@ -107,7 +107,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: auto;
   padding: 20px;
   flex: 1;
 }
@@ -134,7 +134,7 @@ main .container:hover {
 
 main .content {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 15px;
   max-width: 90%;
   justify-content: center;
@@ -197,4 +197,70 @@ footer {
   'wght' 400,
   'GRAD' 0,
   'opsz' 24
+}
+
+@media only screen and (max-width: 665px) {
+  header .container {
+    align-items: center;
+  }
+
+  header .logo h1 {
+    font-size: 2em;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  header .icons a {
+    font-size: 25px;
+  }
+
+  main {
+    width: auto;
+  }
+
+  main .content {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 666px ) and (max-width: 1019px) {
+  main .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header .container {
+    align-items: center;
+  }
+
+  header .logo h1 {
+    font-size: 2em;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  header .icons a {
+    font-size: 25px;
+  }
+
+  main {
+    width: auto;
+  }
+
+}
+
+@media only screen and (min-width: 1020px ) and (max-width: 1335px) {
+  main .content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  main .content {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }

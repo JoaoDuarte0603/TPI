@@ -288,3 +288,131 @@ footer {
   'opsz' 24
 }
 
+@media only screen and (max-width: 600px) {
+  header .container {
+    align-items: center;
+  }
+
+  header .logo h1 {
+    font-size: 2em;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  header .icons a {
+    font-size: 25px;
+  }
+
+  main .container {
+    justify-content: center;
+  }
+
+  main .images {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+
+  }
+
+  main .images img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    width: 380px;
+  }
+
+  main .info {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 380px;
+    height: 500px;
+    padding-left: 0px;
+  }
+
+  main .name_price {
+    padding-left: 10%;
+  }
+
+  main .name_price p {
+    padding-left: 0px;
+  }
+  
+  main .details {
+    padding-left: 10%;
+  }
+
+  main .description {
+    padding-left: 10%;
+  }
+
+  main button {
+    margin-left: 10%;
+    width: 315px;
+  }
+
+  footer {
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    background-color: #AC87C5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    margin-top: 500px;
+    bottom: 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  main .name_price h3 {
+    font-size: 1.5em;
+  }
+
+  main .name_price p {
+    font-size: 1.2em;
+  }
+
+  main .colors #color,
+  main .sizes #size {
+    font-size: 1.2em;
+  }
+
+  main .color,
+  main .size {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  main .description {
+    font-size: 1em;
+  }
+
+  main button {
+    font-size: 1.2em;
+  }
+}
