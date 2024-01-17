@@ -1,168 +1,88 @@
-/* estilos gerais do body */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #756AB6;
-  }
-
-:root{
-  --primary-color: #000000; /* define a cor primária para o uso global */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #8175c9;
 }
 
-.register a:last-child span, /* dar underline à palavra "login" */
-.go-back span {
-  text-decoration: underline;
-  color: black;
-}
-  
-.wrapper{
-  margin: 0;  /* remove a margem */
-  padding: 0; /*remove o preenchimento */
-  box-sizing: border-box;
-  font-size: 'Black Ops One'; /* tamanho da fonte */
-  width:  100%; /* define a largura */
-  display: flex; /* deixa o mesmo flexivel */
-  justify-content: center; /* centraliza horizontalmente */
-  align-items: center; /* centraliza verticalmente */
-  min-height: 100vh; /* altura minima do viewport */
-}
 
-.register_box{
-  position: relative; /* a posição fica relativa */
-  width: 450px; /* largura */
-  backdrop-filter:  blur(25px); /* efeito do desfocado */ 
-  border: 2px solid var(--primary-color); /* borda */
+.box{
+  color: #756AB6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 25px;
+  border-radius: 25px;
+  width: 25%;
+}
+fieldset{
+  border: 3px solid rgb(0, 0, 0);
   border-radius: 15px; /* deixa as bordas redondas */
-  padding: 7.5em 2.5em 4em 2.5em; /* preenchimento */
-  color: rgb(255, 255, 255); /* cor do texto */
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3); /* adiciona uma sombra */
 }
-
-.register-header{
-  position: absolute; /* a posição fica absoluta */
-  top: 0; /* distância do "top" */
-  left: 50%; /* alinha em relação ao centro horizontal */
-  transform: translate(-50%); /* centralizar horizontalmente */
-  display: flex; /* flex */
-  align-items: center; /* alinha o conteudo verticalmente ao centro */
-  justify-content: center; /* alinha o conteudo ao centro horizontalmente */
-  background-color: rgb(0, 0, 0); /* cor do fundo */
-  width: 140px; /* largura */
-  height: 70px; /* altura */
-  border-radius: 0 0 20px 20px; /* deixa as bordas redondas */
+legend{
+  border: 3px solid rgb(0, 0, 0);
+  padding: 10px;
+  text-align: center;
+  background-color: 756AB6;
+  border-radius: 8px;
 }
-
-/* estilos para o texto dentro do cabeçalho do login */
-.register-header span{
-  font-size: 30px; /* tamanho da fonte */
-  color: #756AB6; /* cor da fonte */
+.inputBox{
+  position: relative;
 }
-
-.register-header::before{
-  content: ""; /* deixa o conteudo em branco */
-  position: absolute; /* posição absoluta */
-  top: 0; /* distância do top */
-  left: -30px; /* alinhar à esquerda */
-  width: 30px; /* largura */
-  height: 30px; /* altura */
-  border-top-right-radius: 50%; /* torna a borda superior direita redonda */
-  background: transparent; /* deixa o fundo transparente */
-  box-shadow: 15px 0 0 0 var(--primary-color); /* adiciona uma sombra à caixa */
+.inputUser{
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  width: 100%;
+  letter-spacing: 2px;
 }
-
-.register-header::after{
-  content: ""; /* deixa o conteudo em branco */
-  position: absolute; /* posição absoluta */
-  top: 0; /* distância do top */
-  right: -30px; /* alinhar à esquerda */
-  width: 30px; /* largura */
-  height: 30px; /* altura */
-  border-top-left-radius: 50%; /* torna a borda superior direita redonda */
-  background: transparent; /* deixa o fundo transparente */
-  box-shadow: -15px 0 0 0 var(--primary-color); /* adiciona uma sombra à caixa */
+.labelInput{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  transition: .5s;
 }
-
-.input_box{
-  position: relative; /* define a posição como relativa */
-  display: flex; /* flexivel */
-  flex-direction: column; /* define a direção do conteudo como coluna */
-  margin: 20px 0; /* deixa as margens superior/inferior com 20px e as margens laterais com 0px */
-}
-
-/* estilos para o input-fiel */
-.input-field{
-  width: 85%; /* define a largura como 85% */
-  height: 55px; /* define a altura como 55px */
-  font-size: 16px; /* define o tamanho da fonte */
-  background: transparent; /* deixa o fundo transparente */
-  color: var(--primary-color); /* define a cor do texto como a cor primária */
-  padding-inline: 20px 50px; /* define o preenchimento interno (padding) para cima/baixo com 20px e esquerda/direita com 50px */ 
-  border: 2px solid var(--primary-color); /* deixa a borda com 2px sólida */
-  border-radius: 30px; /* deixa a borda redonda */ 
-  outline: none; /* não tem contorno */
-}
-
-#user{
-  margin-bottom: 10px; /* define uma margem de 10px */
-}
-
-.label{
-  position: absolute; /* deixa a posição absoluta */
-  top: 15px; /* distância do "top" como 15px */
-  left: 20px; /* distância da esquerda como 20px */
-  transition: .2s; /* deixa uma transição "suave" */
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput{
+  top: -20px;
+  font-size: 12px;
+  color: #756AB6;
 }
 
 
-.input-field:focus ~ .label,
-.input-field:valid ~ .label{
-  position: absolute; /* define a posição como absoluta */
-  top: -10px; /* move a mesma para cima */
-  left: 20px; /* move a mesma para a esquerda */
-  font-size: 14px; /* define o tamanho da fonte */
-  background-color: rgb(0, 0, 0); /* define a cor de fundo */
-  border-radius: 30px; /* deixa a borda redonda */
-  color: rgb(255, 255, 255); /* define a cor do texto */
-  padding: 0 10px; /* adiciona um preenchimento interno */
+#submit{
+  background-image: linear-gradient(to right,#756AB6, rgb(0, 0, 0));
+  width: 100%;
+  border: none;
+  padding: 15px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
-.icon{
-  position: absolute; /* define a poisção como absoluta */
-  top: 18px; /* distância do "top" */
-  right: 25px; /* distância do lado direito */
-  font-size: 20px; /* define o tamanho da fonte */
+#submit:hover{
+  background-image: linear-gradient(to right,#756AB6, rgb(255, 255, 255));
 }
 
-.remember-fogort{
-  display: flex; /* flexível */
-  justify-content: space-between; /* distribui o espaço entre o conteudo */
-  font-size: 15px; /* define o tamanho da fonte */
+
+.already-account{
+  color: white;
 }
 
-.input-submit{
-  width: 100%; /* define a largura como 100% */
-  height: 50px; /* define a altura como 100% */
-  background: #000000; /* define a cor de fundo */
-  font-size: 16px; /* define o tamanho da fonte */
-  font-weight: 500; /* */
-  border: none; /* remove a borda */
-  border-radius: 30px; /* deixa a borda redonda */
-  cursor: pointer; /* deixa o cursor do rato com o estilo "pointer" ao passar por cima */
-  transition: .3s; /* adiciona uma transição suave */
-  color: white; /* define a cor do texto */
+.already-account span{
+  color: #756AB6;
+}
+.already-account a{
+  color: white
 }
 
-.register{
-  text-align: center; /* alinha ao centro o texto */
+.go-back a {
+  color: white; 
 }
-
-.register a{
-  font-weight: 500; /**/
-}
-
-a{
-  text-decoration: none; /* retira a decoração de texto nos links */
-  color: var(--primary-color); /* define a cor do texto */
-}
-
