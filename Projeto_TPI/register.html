@@ -1,51 +1,55 @@
+<?php
+
+    if(isset($_POST['submit']))
+    {
+        print_r($_POST['nome']);
+        print_r($_POST['senha']);
+
+
+
+        $nome = $_POST['nome'];
+        $senha = $_POST['senha'];
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles_register.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title> V0ID Register </title>
-    <!-- BOXICONS -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="assets/css/style.css">
-  </head>
+
+</head>
 <body>
-
-    <div class="wrapper">
-        <div class="register_box">
-            <div class="register-header">
-                <span> Register </span>
-            </div>
-            <div class="input_box">
-                <input type="text" id="user" class="input-field" required>
-                <label for="user" class="label"> Username </label>
-                <i class="bx bx-user icon"> </i>
-            </div>
-            <div class="input_box">
-                <input type="password" id="pass" class="input-field" required>
-                <label for="pass" class="label"> Password </label>
-                <i class="bx bx-lock-alt icon"> </i>
-            </div>
-            <div class="remember-fogort">
-                <div class="remember-me">
-                    <input type="checkbox" id="remember">
-                    <label for="remember"> Remember me</label>
+    <div class="box">
+        <form action="register.php" method="POST">
+            <fieldset>
+                <legend><b> Register </b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput"> Username </label>
                 </div>
-
-            </div>
-            <div class="input_box">
-                <input type="submit" class="input-submit" value="Register">
-            </div>
-            <div class="register">
+                <br><br>
+                <div class="inputBox">
+                    <input type="password" name="senha" id="senha" class="inputUser" required>
+                    <label for="senha" class="labelInput"> Password </label>
+                </div>
+                
+                <br><br>
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
+            <div class="already-account">
                 <p> Already have an account? <a href="login.html"> <span> Login </span></a></p>
             </div>
             <div class="go-back">
                 <span><a href="Index.html"> GO BACK </a></span> 
             </div>
-        </div>
-        
-
-        </div>
-
+        </form>
+    </div>
 </body>
+</html>
