@@ -72,6 +72,7 @@ main {
     gap: 20px;
     justify-content: center;
     padding: 20px;
+    height: auto;
 }
 
 .type {
@@ -131,7 +132,35 @@ footer {
   text-align: center;
   padding: 10px;
   background-color: #AC87C5;
-  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  user-select: none;
+  margin-top: 10px;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 920px) {
+  header .container {
+    align-items: center;
+  }
+
+  header .logo h1 {
+    font-size: 2em;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  header .icons a {
+    font-size: 25px;
+  }
+
+  main {
+    width: auto;
+  }
+
+  main .content {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+  }
 }

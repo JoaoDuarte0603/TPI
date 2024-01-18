@@ -103,6 +103,98 @@ header .icons a:hover {
   color: #8f148f;
 }
 
+header .burger {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  width: 45px;
+  border: none;
+  background: none;
+  appearance: none;
+  outline: none;
+}
+
+header .burger .bar, .burger::after, .burger::before {
+  content: "";
+  display: block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  width: 75%;
+  height: 2.5px;
+  background-color: black;
+  margin: 6px 0px;
+  transition: 0.4s;
+  border-radius: 2px;
+}
+
+header .burger:hover:before, .burger:hover:after, .burger .bar:hover {
+  background-color: #8f148f;
+  transition: 0.3s ease;
+}
+
+header .burger:hover:after {
+  transition: 0.3s ease;
+  background-color: #8f148f;
+}
+
+header .burger.is-active:before {
+  transform: rotate(-45deg) translate(-3px, 6px);
+}
+
+header .burger.is-active:hover:before {
+  transition: 0.3s ease;
+  background-color: #8f148f;
+}
+
+header .burger.is-active:hover:after {
+  transition: 0.3s ease;
+  background-color: #8f148f;
+}
+
+header .burger.is-active:after {
+  transform: rotate(45deg) translate(-5px, -9px);
+}
+
+header .burger.is-active .bar {
+  opacity: 0%;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  z-index: 98;
+  background-color: #756AB6;
+  margin-top: 80px;
+  transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+  right: 0;
+}
+
+.mobile-nav a {
+  display: block;
+  text-align: center;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 5px;
+  padding: 12px 70px;
+  font-size: 25px;
+  color: #000000;
+  text-decoration: none;
+  background-color: #FFE5E5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-nav a:hover {
+  transition: 0.3s ease;
+  color: #8f148f;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -224,7 +316,7 @@ main .sizes #size {
   font-size: 25px;
  }
 
- main .size {
+main .size {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -469,5 +561,15 @@ footer {
 
   main button {
     font-size: 1.2em;
+  }
+}
+
+@media only screen and (min-width: 1071px) {
+  header .burger {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
   }
 }
