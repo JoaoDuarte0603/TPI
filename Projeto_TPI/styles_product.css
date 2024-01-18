@@ -288,7 +288,7 @@ footer {
   'opsz' 24
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   header .container {
     align-items: center;
   }
@@ -364,29 +364,84 @@ footer {
     bottom: 0;
   }
 
+  main .name_price h3 {
+    font-size: 1.5em;
+  }
 
+  main .name_price p {
+    font-size: 1.2em;
+  }
 
+  main .colors #color,
+  main .sizes #size {
+    font-size: 1.2em;
+  }
 
+  main .color,
+  main .size {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
 
+  main .description {
+    font-size: 1em;
+  }
 
+  main button {
+    font-size: 1.2em;
+  }
+}
 
+@media only screen and (min-width: 801px) and (max-width: 1070px){
+  header .container {
+    align-items: center;
+  }
 
+  header .logo h1 {
+    font-size: 2em;
+  }
 
+  header nav {
+    display: none;
+  }
 
+  header .icons a {
+    font-size: 25px;
+  }
 
+  main .container {
+    justify-content: center;
+    align-items: center;
+  }
 
+  main .info {
+    width: 380px;
+    height: 568px;
+    padding-left: 0px;
+    align-items: center;
+  }
 
+  main .name_price {
+    padding-left: 10%;
+  }
 
+  main .name_price p {
+    padding-left: 0px;
+  }
+  
+  main .details {
+    padding-left: 10%;
+  }
 
+  main .description {
+    padding-left: 10%;
+  }
 
-
-
-
-
-
-
-
-
+  main button {
+    margin-left: 10%;
+    width: 315px;
+  }
 
   main .name_price h3 {
     font-size: 1.5em;
