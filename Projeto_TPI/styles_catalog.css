@@ -180,19 +180,21 @@ header .burger.is-active .bar {
   text-align: center;
   width: 100%;
   max-width: 200px;
-  margin: 0 auto 5px;
+  margin: 0 auto 10px;
   padding: 12px 70px;
   font-size: 25px;
   color: #000000;
   text-decoration: none;
-  background-color: #FFE5E5;
+  background-color: rgba(255, 229, 229, 0.60);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease;
 }
 
 .mobile-nav a:hover {
   transition: 0.3s ease;
   color: #8f148f;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
 }
 
 main {
@@ -202,12 +204,6 @@ main {
   width: auto;
   padding: 20px;
   flex: 1;
-}
-
-main .promo {
-  width: 100%;
-  height: 50px;
-  background-color: yellowgreen;
 }
 
 main .container {
@@ -350,6 +346,16 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  header .burger {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1336px ) and (max-width: 1699px) {
   header .burger {
     display: none;
   }
