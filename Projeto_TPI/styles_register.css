@@ -2,30 +2,30 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #8175c9;
+  background: #756AB6;
 }
 
 
 .box{
-  color: #756AB6;
+  color: black;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #AC87C5;
   padding: 25px;
   border-radius: 25px;
   width: 25%;
 }
 fieldset{
-  border: 3px solid rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
   border-radius: 15px; /* deixa as bordas redondas */
 }
 legend{
-  border: 3px solid rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
   padding: 10px;
   text-align: center;
-  background-color: 756AB6;
+  background-color: #AC87C5;
   border-radius: 8px;
 }
 .inputBox{
@@ -34,12 +34,16 @@ legend{
 .inputUser{
   background: none;
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid black;
   outline: none;
-  color: white;
+  color: black;
   font-size: 15px;
   width: 100%;
   letter-spacing: 2px;
+}
+.inputUser:focus,
+.inputUser:valid {
+  border-bottom: 1px solid #8f148f;
 }
 .labelInput{
   position: absolute;
@@ -52,37 +56,46 @@ legend{
 .inputUser:valid ~ .labelInput{
   top: -20px;
   font-size: 12px;
-  color: #756AB6;
+  color: #8f148f;
 }
 
 
 #submit{
-  background-image: linear-gradient(to right,#756AB6, rgb(0, 0, 0));
+  background-color: #FFE5E5;
   width: 100%;
-  border: none;
   padding: 15px;
-  color: white;
+  border: none;
+  border: none;
+  color: #000000;
+  text-decoration: none;
   font-size: 15px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 10px;
   cursor: pointer;
-  border-radius: 10px;
 }
 
-#submit:hover{
-  background-image: linear-gradient(to right,#756AB6, rgb(255, 255, 255));
+#submit:hover {
+  transform: scale(1.0050);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.50);
+  color: black;
+  transition: 0.3s ease;
+  transform: scale(1.025);
 }
 
 
 .already-account{
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .already-account span{
-  color: #756AB6;
+  color: #000000;
 }
 .already-account a{
-  color: white
+  color: rgb(0, 0, 0)
 }
 
 .go-back a {
-  color: white; 
+  color: rgb(0, 0, 0); 
 }

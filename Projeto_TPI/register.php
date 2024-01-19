@@ -27,22 +27,23 @@
 <body>
     <div class="box">
         <form action="register.php" method="POST">
-            <fieldset>
-                <legend><b> Register </b></legend>
-                <br>
-                <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser" required>
-                    <label for="nome" class="labelInput"> Username </label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="password" name="senha" id="senha" class="inputUser" required>
-                    <label for="senha" class="labelInput"> Password </label>
-                </div>
-                
-                <br><br>
-                <input type="submit" name="submit" id="submit">
-            </fieldset>
+        <fieldset>
+    <legend><b> Register </b></legend>
+        <br>
+        <div class="inputBox">
+            <input type="text" name="nome" id="nome" class="inputUser" required>
+            <label for="nome" class="labelInput"> Username </label>
+        </div>
+        <br><br>
+        <div class="inputBox">
+            <input type="password" name="senha" id="senha" class="inputUser" required>
+            <label for="senha" class="labelInput"> Password </label>
+        </div>
+    
+        <br><br>
+            <input type="submit" name="submit" id="submit" value="Submit">
+        </fieldset>
+
             <div class="already-account">
                 <p> Already have an account? <a href="login.html"> <span> Login </span></a></p>
             </div>
