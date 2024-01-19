@@ -459,6 +459,7 @@ footer {
   main button {
     margin-left: 10%;
     width: 315px;
+    margin-bottom: 10px;
   }
 
   footer {
@@ -497,6 +498,7 @@ footer {
 
   main button {
     font-size: 1.2em;
+    margin-bottom: 10px;
   }
 }
 
@@ -552,6 +554,7 @@ footer {
   main button {
     margin-left: 10%;
     width: 315px;
+    margin-bottom: 10px;
   }
 
   main .name_price h3 {
