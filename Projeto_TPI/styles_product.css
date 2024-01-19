@@ -209,19 +209,21 @@ main .container {
   display: flex;
   width: 70em;
   height: 35.5em;
-  flex-wrap: wrap;
 }
 
 main .images {
-  background-color: rgba(255, 229, 229, 0.60);
+  /*background-color: rgba(255, 229, 229, 0.60);*/
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  height: 35.5em;
+  height: auto;
+  background-color: white;
+  display: flex;
+  align-items: center;
 }
 
 main .images img {
-  height: 35.5em;
+  height: 25.5em;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
@@ -309,6 +311,10 @@ main #yellow {
   background-color: yellow;
 }
 
+main #green {
+  background-color: #5c4f32;
+}
+
 main .sizes {
   margin-top: 15px;
 }
@@ -382,7 +388,7 @@ footer {
   'opsz' 24
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 860px) {
   header .container {
     align-items: center;
   }
@@ -399,15 +405,22 @@ footer {
     font-size: 25px;
   }
 
+  main {
+
+  }
+
   main .container {
     justify-content: center;
+    flex-direction: column;
+    height: auto;
+    width: auto;
   }
 
   main .images {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 0;
-
+    width: 380px;
   }
 
   main .images img {
@@ -440,6 +453,7 @@ footer {
 
   main .description {
     padding-left: 10%;
+    width: 85%;
   }
 
   main button {
@@ -454,7 +468,6 @@ footer {
     background-color: #AC87C5;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    margin-top: 500px;
     bottom: 0;
   }
 
@@ -487,7 +500,7 @@ footer {
   }
 }
 
-@media only screen and (min-width: 801px) and (max-width: 1070px){
+@media only screen and (min-width: 861px) and (max-width: 1040px){
   header .container {
     align-items: center;
   }
@@ -509,9 +522,13 @@ footer {
     align-items: center;
   }
 
+  main .images {
+    height: 455px;
+  }
+
   main .info {
-    width: 380px;
-    height: 568px;
+    width: auto;
+    height: 455px;
     padding-left: 0px;
     align-items: center;
   }
