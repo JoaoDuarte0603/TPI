@@ -230,7 +230,7 @@ main .content {
 
 main .product {
   width: 20em;
-  height: 30em;
+  height: auto;
   border-radius: 10px;
   background-color: rgba(255, 229, 229, 0.60);
   border-radius: 8px;
@@ -241,8 +241,8 @@ main .product {
 }
 
 main .image {
-  width: 17em;
-  height: 23em;
+  width: auto;
+  height: auto;
 } 
 
 main .image img {
@@ -256,6 +256,7 @@ main .image img {
 main .items {
   margin-left: 50px;
   margin-top: 30px;
+  padding-bottom: 20px;
 }
 
 main .items h3 {
