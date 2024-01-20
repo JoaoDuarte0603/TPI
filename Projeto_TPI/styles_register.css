@@ -3,68 +3,68 @@ body {
   margin: 0;
   padding: 0;
   background: #756AB6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex: 1;
+}
 
-.box{
-  color: black;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+main .container {
+  display: flex;
+  width: 490px;
+  height: 400px;
   background-color: #AC87C5;
-  padding: 25px;
-  border-radius: 25px;
-  width: 25%;
+  border-radius: 15px;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
-fieldset{
-  border: 2px solid rgb(0, 0, 0);
-  border-radius: 15px; /* deixa as bordas redondas */
+
+main .title {
+  width: fit-content;
+  height: fit-content;
+  margin-top: 30px;
+  margin-left: 70px;
 }
-legend{
-  border: 2px solid rgb(0, 0, 0);
-  padding: 10px;
-  text-align: center;
-  background-color: #AC87C5;
-  border-radius: 8px;
+
+main .content {
+  width: fit-content;
+  height: fit-content;
+  margin-left: 70px;
 }
-.inputBox{
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 0;
+  justify-content: center;
+}
+
+fieldset .inputBox {
+  display: flex;
+  flex-direction: column;
   position: relative;
-}
-.inputUser{
-  background: none;
-  border: none;
-  border-bottom: 1px solid black;
-  outline: none;
-  color: black;
-  font-size: 15px;
-  width: 100%;
-  letter-spacing: 2px;
-}
-.inputUser:focus,
-.inputUser:valid {
-  border-bottom: 1px solid #8f148f;
-}
-.labelInput{
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  pointer-events: none;
-  transition: .5s;
-}
-.inputUser:focus ~ .labelInput,
-.inputUser:valid ~ .labelInput{
-  top: -20px;
-  font-size: 12px;
-  color: #8f148f;
+  transition: margin-top 0.3s ease;
+  width: 350px;
 }
 
+fieldset #bbb {
+  margin-top: 25px;
+}
 
-#submit{
+fieldset #submit {
+  width: 350px;
+  height: 50px;
   background-color: #FFE5E5;
-  width: 100%;
-  padding: 15px;
-  border: none;
   border: none;
   color: #000000;
   text-decoration: none;
@@ -74,28 +74,68 @@ legend{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   margin-top: 10px;
   cursor: pointer;
+  margin-top: 30px;
 }
 
-#submit:hover {
-  transform: scale(1.0050);
+fieldset #submit:hover {
+  transform: scale(1.05);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.50);
   color: black;
   transition: 0.3s ease;
-  transform: scale(1.025);
 }
 
-
-.already-account{
-  color: rgb(0, 0, 0);
+fieldset .inputUser {
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  color: black;
+  font-size: 15px;
+  width: 100%;
+  letter-spacing: 2px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px;
 }
 
-.already-account span{
-  color: #000000;
-}
-.already-account a{
-  color: rgb(0, 0, 0)
+fieldset .inputUser:focus {
+  border-color: #756AB6;
 }
 
-.go-back a {
-  color: rgb(0, 0, 0); 
+fieldset .labelInput {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 15px;
+  color: black;
+  pointer-events: none;
+  transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+
+}
+
+fieldset .inputUser:focus + .labelInput {
+  transform: translateY(-20px);
+  font-size: 12px;
+  color: #756AB6;
+}
+
+fieldset .inputUser:valid + .labelInput {
+  transform: translateY(-20px);
+  font-size: 12px;
+  color: #756AB6;
+}
+
+fieldset .inputUser:valid {
+  border-bottom: 1px solid #756AB6;
+}
+
+main .already-account, 
+main .go-back {
+  margin-left: 70px;
+  color: black;
+}
+
+main .already-account a,
+main .go-back a {
+  color: #8f148f;
+  text-decoration: underline;
 }
