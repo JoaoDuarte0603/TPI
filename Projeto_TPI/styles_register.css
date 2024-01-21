@@ -139,3 +139,44 @@ main .go-back a {
   color: #8f148f;
   text-decoration: underline;
 }
+
+@media only screen and (max-width: 359px) {
+  main .container {
+ 
+  }
+
+  main .title {
+    margin-left: 20px;
+  }
+  
+  main .content {
+    margin-left: 20px;
+  }
+
+  fieldset #submit {
+    width: 200px;
+  }
+
+  fieldset .inputUser {
+    width: 200px;
+  }
+
+  fieldset #submit {
+    width: 200px;
+  }
+
+  main .already-account, 
+  main .go-back {
+    margin-left: 20px;
+  }
+ }
+ @media only screen and (min-width: 360px) and (max-width: 530px) {
+
+  fieldset .inputUser {
+    width: 250px;
+  }
+
+  fieldset #submit {
+    width: 250px;
+  }
+ }
