@@ -1,24 +1,36 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     include_once('config.php');
-
     $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
+    // Recebe os valores POST dos campos "nome" e "senha"
     $nome = $_POST['nome'];
     $senha = $_POST['senha'];
 
+    // Cria a query onde verifica na tabela a existência do nome e senha inseridos
     $sql = "SELECT * FROM formulario WHERE nome = '$nome' AND senha = '$senha'";
+
+    // Executa a query e guarda os resultados
     $result = $conexao->query($sql);
 
+    // Verifica de a query foi bem sucedida
     if ($result) {
+
+        // Verifica se existem valores
         if ($result->num_rows > 0) {
+
+            // Case seja bem sucedido, redireciona para a página index e termina o código
             header('Location: index.html');
+            $conexao->close();
             exit();
         }
     }
+
+    // Fecha a conexão à base de dados
     $conexao->close();
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
