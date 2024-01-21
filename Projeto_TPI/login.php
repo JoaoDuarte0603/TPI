@@ -1,39 +1,21 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Your database connection details
     include_once('config.php');
 
-    // Create a database connection
     $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
-    // Check if the connection was successful
-    if ($conexao->connect_error) {
-        die("Connection failed: " . $conexao->connect_error);
-    }
-
-    // Get user input
     $nome = $_POST['nome'];
     $senha = $_POST['senha'];
 
-    // Query to check if the user exists in the database
     $sql = "SELECT * FROM formulario WHERE nome = '$nome' AND senha = '$senha'";
     $result = $conexao->query($sql);
 
-    // Check if the query was successful
     if ($result) {
-        // Check if a matching user was found
         if ($result->num_rows > 0) {
-            // Redirect to index.html
             header('Location: index.html');
-            exit(); // Ensure that no more code is executed after the header function
-        } else {
-            echo "Invalid username or password. <a href='login.html'>Try again</a>";
+            exit();
         }
-    } else {
-        echo "Error: " . $conexao->error;
     }
-
-    // Close the database connection
     $conexao->close();
 }
 ?>
@@ -52,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="container">
             <div class="title"><h1>Login</h1></div>  
             <div class="content">
-                <form action="testlogin.php" method="POST">
+                <form action="login.php" method="POST">
                     <fieldset>
                         <div class="inputBox" id="aaa">
                             <input type="text" name="nome" id="nome" class="inputUser" required>
